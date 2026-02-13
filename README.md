@@ -33,7 +33,6 @@ Example: 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb
 ```solidity
 require(condition, "error message");
 ```
-- It's like a security guard
 - If condition is FALSE → STOP everything and show error
 - If condition is TRUE → Continue
 
@@ -78,7 +77,7 @@ require(condition, "error message");
 
 ---
 
-## 🎮 TESTING YOUR CONTRACT (The Fun Part!)
+## 🎮 TESTING YOUR CONTRACT 
 
 Now you have 3 addresses:
 - **BUYER** = The account that deployed (you)
@@ -181,93 +180,3 @@ function confirmDelivery() public {
 **Fix:** Fill in the VALUE box before clicking deposit
 
 ---
-
-## 🎯 SOLIDITY CONCEPTS YOU JUST LEARNED
-
-### 1. **State Variables** (Memory)
-```solidity
-address public buyer;
-uint256 public price;
-bool public isComplete;
-```
-These store data permanently on the blockchain
-
-### 2. **Functions**
-```solidity
-function deposit() public payable { }
-```
-- `public` = anyone can call it
-- `payable` = can receive ETH
-
-### 3. **Require Statements** (Security)
-```solidity
-require(condition, "Error message");
-```
-Protects against bad inputs
-
-### 4. **Events** (Notifications)
-```solidity
-emit MoneyDeposited(msg.sender, msg.value);
-```
-Creates logs you can see
-
-### 5. **Transfers** (Sending Money)
-```solidity
-payable(seller).transfer(price);
-```
-Sends ETH from contract to address
-
----
-
-## 🚀 NEXT STEPS (After You Master This)
-
-1. ✅ **Add a deadline** - Auto-refund after 7 days
-2. ✅ **Add an arbitrator** - Third party to resolve disputes
-3. ✅ **Support multiple deals** - Array of agreements
-4. ✅ **Add ERC20 tokens** - Use USDC instead of ETH
-
-But first, **play with this simple version** until it makes sense!
-
----
-
-## 💡 TIPS FOR LEARNING
-
-1. **Change the code** - Break things! See what happens!
-2. **Read error messages** - They tell you what's wrong
-3. **Test everything** - Click all the buttons
-4. **Ask questions** - No question is stupid
-5. **Go slow** - You don't need to understand everything at once
-
----
-
-## 🆘 NEED HELP?
-
-If something doesn't work:
-1. Read the error message carefully
-2. Check you're using the right account
-3. Make sure you filled in all required fields
-4. Try deploying a fresh contract
-
-**Remember: Every Solidity developer started exactly where you are now!** 💪
-
----
-
-## 📝 QUICK REFERENCE
-
-### Wei Converter
-- 0.001 ETH = `1000000000000000` wei (15 zeros)
-- 0.01 ETH  = `10000000000000000` wei (16 zeros)
-- 0.1 ETH   = `100000000000000000` wei (17 zeros)
-- 1 ETH     = `1000000000000000000` wei (18 zeros)
-
-### Function Cheat Sheet
-- `deposit()` - Buyer sends money (need to set VALUE)
-- `confirmDelivery()` - Buyer approves, seller gets paid
-- `refund()` - Buyer gets money back
-- `getBalance()` - Check how much ETH in contract
-- `getStatus()` - See current status in plain English
-
-### Button Colors in Remix
-- 🔴 **Red** = Payable function (can send ETH)
-- 🟠 **Orange** = Changes data (costs gas)
-- 🔵 **Blue** = View only (free, no gas)
