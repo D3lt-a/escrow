@@ -1,24 +1,4 @@
-# 🎓 BEGINNER'S GUIDE TO YOUR FIRST SMART CONTRACT
-
-## 📚 What You'll Learn
-
-By the end of this, you'll understand:
-- What a smart contract is
-- How to deploy one
-- How to interact with it
-- Basic Solidity concepts
-
-**Don't worry if you're confused at first - everyone starts here!** 🌱
-
----
-
-## 🤔 What is This Contract Doing?
-
-Imagine you want to buy a laptop from someone online:
-
-**Without Escrow:**
-- 😰 You send money → They disappear (you lose money!)
-- 😰 They ship first → You don't pay (they lose laptop!)
+# Escrow Guide
 
 **With Escrow (Our Contract):**
 1. 💰 You send money to the **contract** (not to seller)
